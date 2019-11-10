@@ -1,7 +1,5 @@
 package objsets
 
-import java.util.Optional
-
 import TweetReader._
 
 /**
@@ -9,9 +7,8 @@ import TweetReader._
   */
 class Tweet(val user: String, val text: String, val retweets: Int) {
   override def toString: String =
-//    "User: " + user + "\n" +
-//      "Text: " + text +
-    " [" + retweets + "]"
+    "User: " + user + "\n" +
+      "Text: " + text + " [" + retweets + "]"
 }
 
 /**
@@ -35,7 +32,7 @@ class Tweet(val user: String, val text: String, val retweets: Int) {
   *
   * [1] http://en.wikipedia.org/wiki/Binary_search_tree
   */
-abstract class TweetSet {
+abstract class TweetSet extends TweetSetInterface {
 
   /**
     * This method takes a predicate and returns a subset of all the elements
